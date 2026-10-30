@@ -8,28 +8,28 @@ Bienvenido al repositorio oficial del proyecto **Gourmet Delight Bakery**, una p
 * **Sitio Web Publicado:** [https://proyectodecatedralme.netlify.app/](https://proyectodecatedralme.netlify.app/)]
 
 ## 👥 Integrantes del Equipo
-* **Ricardo Valdés** - VV263450-01T[cite: 1]
-* **Ariel Rodriguez** - 01T[cite: 1]
+* **Ricardo Valdés** - VV263450-01T.
+* **Ariel Rodriguez** - 01T
 
-* **Docente:** Delmy Majano[cite: 1]
-* **Grupo de Cátedra:** 01T[cite: 1]
+* **Docente:** Delmy Majano
+* **Grupo de Cátedra:** 01T
 
 ---
 
 ## 🛠️ Stack Tecnológico
-* **HTML5:** Estructura semántica de las páginas[cite: 10].
-* **CSS3 & Bootstrap 5.3:** Maquetación responsiva, componentes visuales y estilos personalizados[cite: 10].
-* **JavaScript (ES6+):** Lógica del cliente, manipulación del DOM, filtros dinámicos, gestión del carrito con `localStorage` y validación de formularios con RegEx[cite: 8, 9, 10].
+* **HTML5:** Estructura semántica de las páginas.
+* **CSS3 & Bootstrap 5.3:** Maquetación responsiva, componentes visuales y estilos personalizados.
+* **JavaScript (ES6+):** Lógica del cliente, manipulación del DOM, filtros dinámicos, gestión del carrito con `localStorage` y validación de formularios con RegEx.
 * **Bootstrap Icons:** Iconografía intuitiva.
-* **Git & GitHub:** Control de versiones colaborativo y alojamiento remoto[cite: 10].
+* **Git & GitHub:** Control de versiones colaborativo y alojamiento remoto.
 
 ---
 
 ## 📋 Gestión del Proyecto
-* **Tablero de Trabajo (Trello):** [https://trello.com/invite/b/6ae414479671adddc70ee1f3/ATTI8093791e60504908ff77f7ae848a3448CB73E346/proyecto-de-catedra-lme][cite: 15]
+* **Tablero de Trabajo (Trello):** [https://trello.com/invite/b/6ae414479671adddc70ee1f3/ATTI8093791e60504908ff77f7ae848a3448CB73E346/proyecto-de-catedra-lme]
 * **Documentación en PDF:**
-  * [Manual de Usuario](./Manual_de_Usuario.pdf)[cite: 15]
-  * [Manual Técnico](./Manual_Tecnico.pdf)[cite: 15]
+  * [Manual de Usuario](./Manual_de_Usuario.pdf)
+  * [Manual Técnico](./Manual_Tecnico.pdf)
 
 ---
 
