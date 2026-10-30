@@ -38,7 +38,6 @@ Bienvenido al repositorio oficial del proyecto **Gourmet Delight Bakery**, una p
 ## 🚀 Instrucciones para Ejecutar Localmente
 
 1. **Clonar el repositorio:**
-   ```bash
    git clone [https://github.com/tu-usuario/nombre-de-tu-repo.git](https://github.com/tu-usuario/nombre-de-tu-repo.git)
 
    Este proyecto está bajo la licencia Creative Commons Attribution 4.0 International (CC BY 4.0).   
