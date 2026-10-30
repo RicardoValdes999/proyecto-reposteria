@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Delight Bakery - Repostería Artesanal & Productos Gourmet</title>
+    
+    <!-- Bootstrap 5.3 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos Personalizados y Personalización de Bootstrap -->
+    <link rel="stylesheet" href="Personalizacion.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- 1. NAVBAR / NAVEGACIÓN PRINCIPAL          -->
+    <!-- ========================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <i class="bi bi-shop fs-2 text-primary-custom me-2"></i>
+                <div>
+                    <span class="fs-4 fw-bold font-serif text-dark-custom d-block lh-1">Gourmet Delight</span>
+                    <small class="text-muted fs-7 font-sans-serif" style="font-size: 0.75rem; letter-spacing: 1px;">BAKERY & PASTRY</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center fw-medium">
+                    <li class="nav-item"><a class="nav-link px-3 active" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#gallery">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contacto</a></li>
+                </ul>
+                <div class="d-flex justify-content-center gap-2 mt-3 mt-lg-0">
+                    <!-- Botón del Carrito con Badge Contador -->
+                    <button class="btn btn-outline-bakery position-relative d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="bi bi-cart3 fs-5"></i>
+                        <span>Carrito</span>
+                        <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- 2. SECCIÓN INICIO / HERO & OFERTAS         -->
+    <!-- ========================================== -->
+    <section id="home">
+        <!-- Hero Header -->
+        <header class="hero-header text-center d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill font-sans-serif fw-normal fs-6">
+                            <i class="bi bi-stars me-1"></i> Horneado Fresco Todos los Días
+                        </span>
+                        <h1 class="display-3 fw-bold mb-3 font-serif">"Baking Happiness Every Day"</h1>
+                        <p class="lead mb-4 text-light opacity-90 px-md-5">
+                            En Gourmet Delight Bakery creemos que cada bocado debe traer alegría. Desde nuestros panes artesanales recién horneados hasta finas galletas y pasteles gourmet elaborados con ingredientes seleccionados de primera calidad.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#menu" class="btn btn-bakery btn-lg">Explorar Menú</a>
+                            <a href="#contact" class="btn btn-outline-light rounded-pill px-4 btn-lg">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Ofertas Especiales (Special Offers) -->
+        <div class="container my-5 py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold font-serif text-dark-custom">Ofertas Especiales de Temporada</h2>
+                <p class="text-muted">Descubre nuestras promociones exclusivas preparadas con amor</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Oferta 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Chocolate Lovers" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column text-center p-4">
+                            <h5 class="card-title font-serif fw-bold">Chocolate Lover's</h5>
+                            <p class="card-text text-muted small flex-grow-1">Bizcocho de chocolate intenso capas de ganache cremoso. Perfect para amantes del cacao.</p>
+                            <button class="btn btn-bakery w-100 mt-2" onclick="agregarAlCarrito(1)">Ordenar Oferta - $18.00</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oferta 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Tartaleta de Frutas" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column text-center p-4">
+                            <h5 class="card-title font-serif fw-bold">Fresh Berry Tart</h5>
+                            <p class="card-text text-muted small flex-grow-1">Masa sablée crujiente, crema pastelera suave y selección de frutos rojos frescos.</p>
+                            <button class="btn btn-bakery w-100 mt-2" onclick="agregarAlCarrito(2)">Ordenar Oferta - $4.50</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oferta 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Croissants" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column text-center p-4">
+                            <h5 class="card-title font-serif fw-bold">Classic Croissants</h5>
+                            <p class="card-text text-muted small flex-grow-1">Pack de croissants tradicionales hojaldrados con mantequilla pura importada.</p>
+                            <button class="btn btn-bakery w-100 mt-2" onclick="agregarAlCarrito(3)">Ordenar Oferta - $3.00</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oferta 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Lemon Muffins" style="height: 200px; object-fit: crop;">
+                        <div class="card-body d-flex flex-column text-center p-4">
+                            <h5 class="card-title font-serif fw-bold">Lemon Poppy Seed</h5>
+                            <p class="card-text text-muted small flex-grow-1">Muffins esponjosos cítricos con semillas de amapola y glaseado natural de limón.</p>
+                            <button class="btn btn-bakery w-100 mt-2" onclick="agregarAlCarrito(4)">Ordenar Oferta - $2.75</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. SECCIÓN MENÚ / CATÁLOGO DINÁMICO JS     -->
+    <!-- ========================================== -->
+    <section id="menu" class="py-5 bg-accent-custom">
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="display-5 fw-bold font-serif text-dark-custom">Nuestro Menú Gourmet</h2>
+                <p class="text-muted">Selecciona una categoría o busca tu producto favorito</p>
+            </div>
+
+            <!-- Filtros de Categorías y Buscador -->
+            <div class="row mb-4 justify-content-center align-items-center g-3">
+                <div class="col-lg-8 text-center">
+                    <div class="btn-group flex-wrap gap-2" role="group" aria-label="Filtros de menú">
+                        <button type="button" class="btn btn-bakery btn-filter active" onclick="filtrarProductos('todos', this)">Todos</button>
+                        <button type="button" class="btn btn-outline-bakery btn-filter" onclick="filtrarProductos('pasteleria', this)">Pastelería</button>
+                        <button type="button" class="btn btn-outline-bakery btn-filter" onclick="filtrarProductos('panes', this)">Panes</button>
+                        <button type="button" class="btn btn-outline-bakery btn-filter" onclick="filtrarProductos('pasteles', this)">Pasteles</button>
+                        <button type="button" class="btn btn-outline-bakery btn-filter" onclick="filtrarProductos('bebidas', this)">Bebidas</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                        <input type="text" id="inputBuscar" class="form-control border-start-0" placeholder="Buscar producto..." onkeyup="buscarProductos()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Productos Renderizado Dinámicamente -->
+            <div class="row g-4" id="contenedorProductos">
+                <!-- Se llena mediante JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. SECCIÓN SOBRE NOSOTROS / HISTORIA       -->
+    <!-- ========================================== -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <!-- Nuestra Historia -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="Nuestra Cocina">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <span class="text-primary-custom fw-bold text-uppercase tracking-wider">Nuestra Historia</span>
+                    <h2 class="display-6 fw-bold font-serif mb-3">Pasión e Ingredientes de Calidad desde 2015</h2>
+                    <p class="text-muted">
+                        Nuestra aventura comenzó en una pequeña cocina artesanal con una visión clara: devolverle al pan y a la repostería el sabor auténtico de antaño. Nos apasiona fusionar técnicas tradicionales francesas con toques contemporáneos.
+                    </p>
+                    <p class="text-muted">
+                        Utilizamos mantequilla pura de alta calidad, harinas no blanqueadas e ingredientes locales de temporada para asegurar que cada bocado entregue una experiencia memorable.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Misión, Visión y Valores (Acordeón de Bootstrap) -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <h3 class="text-center font-serif fw-bold mb-4">Nuestra Filosofía</h3>
+                    <div class="accordion shadow-sm" id="accordionFilosofia">
+                        <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMision">
+                                    <i class="bi bi-heart-fill me-2 text-primary-custom"></i> Nuestra Misión
+                                </button>
+                            </h2>
+                            <div id="collapseMision" class="accordion-collapse collapse show" data-bs-parent="#accordionFilosofia">
+                                <div class="accordion-body text-muted">
+                                    Brindar momentos inolvidables de dulzura y confort mediante la elaboración artesanal de productos de repostería y panadería de la más alta calidad, con un servicio cálido y personalizado.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseValores">
+                                    <i class="bi bi-star-fill me-2 text-primary-custom"></i> Nuestros Valores
+                                </button>
+                            </h2>
+                            <div id="collapseValores" class="accordion-collapse collapse" data-bs-parent="#accordionFilosofia">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>Calidad Absoluta:</strong> Sin preservantes artificiales ni sustitutos.</li>
+                                        <li><strong>Sostenibilidad:</strong> Empaques ecológicos y reducción de desperdicios.</li>
+                                        <li><strong>Comunidad:</strong> Apoyo activo a productores e ingredientes locales.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nuestro Equipo (Team Cards) -->
+            <div class="text-center mb-4">
+                <h3 class="font-serif fw-bold">Conoce a Nuestro Equipo</h3>
+                <p class="text-muted">Los maestros panaderos y reposteros detrás de cada receta</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm p-3 hover-card">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=300&auto=format&fit=crop" class="rounded-circle mx-auto mt-3 mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Chef Jane Doe">
+                        <h5 class="font-serif fw-bold mb-1">Jane Doe</h5>
+                        <small class="text-primary-custom fw-semibold mb-2">Chef Pastelera Principal</small>
+                        <p class="text-muted small">Especialista en alta repostería francesa con 12 años de experiencia internacional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm p-3 hover-card">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=300&auto=format&fit=crop" class="rounded-circle mx-auto mt-3 mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="John Smith">
+                        <h5 class="font-serif fw-bold mb-1">John Smith</h5>
+                        <small class="text-primary-custom fw-semibold mb-2">Maestro Panadero</small>
+                        <p class="text-muted small">Apasionado de la masa madre natural y métodos de fermentación lenta.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm p-3 hover-card">
+                        <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=300&auto=format&fit=crop" class="rounded-circle mx-auto mt-3 mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Emily Johnson">
+                        <h5 class="font-serif fw-bold mb-1">Emily Johnson</h5>
+                        <small class="text-primary-custom fw-semibold mb-2">Especialista en Chocolatería</small>
+                        <p class="text-muted small">Creadora de nuestras coberturas finas y combinaciones únicas de sabores.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm p-3 hover-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&auto=format&fit=crop" class="rounded-circle mx-auto mt-3 mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Michael Brown">
+                        <h5 class="font-serif fw-bold mb-1">Michael Brown</h5>
+                        <small class="text-primary-custom fw-semibold mb-2">Barista & Servicio</small>
+                        <p class="text-muted small">Experto en maridaje de cafés de especialidad con nuestra repostería.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. SECCIÓN GALERÍA DE FOTOS                -->
+    <!-- ========================================== -->
+    <section id="gallery" class="py-5 bg-accent-custom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold font-serif text-dark-custom">Galería Fotográfica</h2>
+                <p class="text-muted">Explora nuestras creaciones, eventos y el ambiente de nuestra panadería</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Tarjeta 1: Productos -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 hover-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Productos Horneados" style="height: 220px; object-fit: cover;">
+                        </div>
+                        <div class="card-body p-3">
+                            <span class="badge bg-secondary mb-2">Productos</span>
+                            <h5 class="card-title font-serif fs-6">Baked Goods</h5>
+                            <p class="card-text text-muted small">Surtido diario de croissants, panes rústicos y galletas recién horneadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 2: Eventos -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 hover-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Eventos Especiales" style="height: 220px; object-fit: cover;">
+                        </div>
+                        <div class="card-body p-3">
+                            <span class="badge bg-primary mb-2">Catering</span>
+                            <h5 class="card-title font-serif fs-6">Eventos & Celebraciones</h5>
+                            <p class="card-text text-muted small">Mesas de postres personalizadas para bodas, cumpleaños y eventos corporativos.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 3: Detrás de Cámara -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 hover-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Detrás de Cámara" style="height: 220px; object-fit: cover;">
+                        </div>
+                        <div class="card-body p-3">
+                            <span class="badge bg-dark mb-2">Proceso</span>
+                            <h5 class="card-title font-serif fs-6">Behind the Scenes</h5>
+                            <p class="card-text text-muted small">Un vistazo al trabajo artesanal en nuestra cocina cada mañana.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 4: Clientes Felices -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 hover-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=500&auto=format&fit=crop" class="card-img-top" alt="Clientes Felices" style="height: 220px; object-fit: cover;">
+                        </div>
+                        <div class="card-body p-3">
+                            <span class="badge bg-success mb-2">Comunidad</span>
+                            <h5 class="card-title font-serif fs-6">Happy Customers</h5>
+                            <p class="card-text text-muted small">Sonrisas y momentos especiales compartidos en nuestro acogedor local.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. SECCIÓN CONTACTO & INFORMACIÓN          -->
+    <!-- ========================================== -->
+    <section id="contact" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold font-serif text-dark-custom">Contáctanos</h2>
+                <p class="text-muted">¿Tienes alguna consulta o pedido especial? ¡Estamos para servirte!</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Formulario de Contacto -->
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm p-4 rounded-4" id="cardContactoForm">
+                        <h4 class="font-serif fw-bold mb-3">Envíanos un Mensaje</h4>
+                        <form id="contactForm" onsubmit="procesarContacto(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="contactNombre" class="form-label font-sans-serif small fw-medium">Nombre Completo *</label>
+                                    <input type="text" class="form-control" id="contactNombre" required placeholder="Ej. Ana Gómez">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contactEmail" class="form-label font-sans-serif small fw-medium">Correo Electrónico *</label>
+                                    <input type="email" class="form-control" id="contactEmail" required placeholder="ana@ejemplo.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="contactAsunto" class="form-label font-sans-serif small fw-medium">Asunto *</label>
+                                    <input type="text" class="form-control" id="contactAsunto" required placeholder="Consulta sobre pedido especial">
+                                </div>
+                                <div class="col-12">
+                                    <label for="contactMensaje" class="form-label font-sans-serif small fw-medium">Mensaje *</label>
+                                    <textarea class="form-control" id="contactMensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-bakery w-100 py-2">Enviar Mensaje</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Tarjeta Dinámica de Confirmación de Feedback (Oculta por defecto) -->
+                    <div class="card border-0 shadow-sm p-4 rounded-4 text-center d-none bg-accent-custom" id="cardContactoFeedback">
+                        <div class="my-4">
+                            <i class="bi bi-check-circle-fill text-success display-3"></i>
+                            <h4 class="font-serif fw-bold mt-3">¡Gracias por tus comentarios!</h4>
+                            <p class="text-muted">Hemos recibido tu mensaje correctamente. Nuestro equipo se pondrá en contacto contigo en breve.</p>
+                            <button class="btn btn-outline-bakery mt-2" onclick="resetFormContacto()">Enviar otro mensaje</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto y Horarios -->
+                <div class="col-12 col-lg-5">
+                  <div class="p-4 p-md-5 rounded-4 shadow" style="background-color: #2d1810 !important; color: #ffffff !important;">
+                     <h3 class="fw-bold mb-4 text-white">Información de Local</h3>
+        
+                      <div class="d-flex mb-3">
+                        <i class="bi bi-geo-alt-fill text-warning fs-4 me-3"></i>
+                        <div>
+                          <strong class="d-block text-white">Dirección:</strong>
+                           <span class="text-white-50">123 Sweet Street, Suite 101, San Salvador</span>
+                        </div>
+                     </div>
+
+                     <div class="d-flex mb-3">
+                         <i class="bi bi-telephone-fill text-warning fs-4 me-3"></i>
+                         <div>
+                            <strong class="d-block text-white">Teléfono / WhatsApp:</strong>
+                             <span class="text-white-50">+503 2255-8899 / +503 7788-9900</span>
+                        </div>
+                     </div>
+
+                     <div class="d-flex mb-4">
+                         <i class="bi bi-clock-fill text-warning fs-4 me-3"></i>
+                         <div>
+                             <strong class="d-block text-white">Horarios de Atención:</strong>
+                              <p class="text-white-50 mb-0">Lunes a Viernes: 7:00 AM – 6:00 PM</p>
+                              <p class="text-white-50 mb-0">Sábados: 8:00 AM – 5:00 PM</p>
+                              <p class="text-white-50 mb-0">Domingos: Cerrado</p>
+                         </div>
+                     </div>
+
+                     <hr class="border-secondary my-4">
+
+                     <h5 class="fw-bold mb-3 text-white">Síguenos en Redes Sociales</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-whatsapp"></i></a>
+                     </div>
+                </div>
+            </div>
+            
+    <!-- ========================================== -->
+    <!-- 7. FOOTER / PIE DE PÁGINA                  -->
+    <!-- ========================================== -->
+    <footer class="bg-dark-custom text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="font-serif fw-bold text-white mb-3">Gourmet Delight Bakery</h5>
+                    <p class="text-light opacity-75 small">
+                        Dedicados a crear la mejor repostería artesanal y panadería gourmet con ingredientes frescos seleccionados cuidadosamente.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-serif fw-bold text-white mb-3">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#home" class="text-light text-decoration-none opacity-75">Inicio</a></li>
+                        <li class="mb-2"><a href="#menu" class="text-light text-decoration-none opacity-75">Menú Completo</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light text-decoration-none opacity-75">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-light text-decoration-none opacity-75">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="font-serif fw-bold text-white mb-3">Boletín Informativo</h5>
+                    <p class="text-light opacity-75 small">Suscríbete para recibir ofertas especiales y cupones de descuento.</p>
+                    <div class="input-group input-group-sm">
+                        <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                        <button class="btn btn-warning" type="button">Suscribir</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-light opacity-50 small">
+                <p class="mb-0">&copy; 2026 Gourmet Delight Bakery. Todos los derechos reservados. Proyecto Académico Lenguaje de Marcado y Estilo Web.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- 8. MODAL DE CARRITO Y COMPRA (CHECKOUT)    -->
+    <!-- ========================================== -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary-custom text-white">
+                    <h5 class="modal-header-title font-serif fw-bold mb-0" id="cartModalLabel">
+                        <i class="bi bi-cart-check me-2"></i>Tu Carrito de Compras
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <!-- Vista de Lista de Productos -->
+                    <div id="vistaCarrito">
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th class="text-center">Cantidad</th>
+                                        <th class="text-end">Subtotal</th>
+                                        <th class="text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaCarritoBody">
+                                    <!-- Cargado Dinámicamente mediante JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="carritoVacioMsg" class="text-center py-4 d-none">
+                            <i class="bi bi-cart-x text-muted display-4"></i>
+                            <p class="text-muted mt-2">Tu carrito está vacío actualmente.</p>
+                        </div>
+
+                        <!-- Resumen de Costos -->
+                        <div class="row justify-content-end mt-4">
+                            <div class="col-md-6 col-lg-5">
+                                <div class="bg-light p-3 rounded-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Subtotal:</span>
+                                        <span id="resumenSubtotal" class="fw-semibold">$0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>IVA (13%):</span>
+                                        <span id="resumenImpuesto" class="fw-semibold">$0.00</span>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between fs-5 fw-bold text-primary-custom">
+                                        <span>Total General:</span>
+                                        <span id="resumenTotal">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vista de Formulario de Checkout (Oculta por defecto) -->
+                    <div id="vistaCheckout" class="d-none">
+                        <h5 class="font-serif fw-bold mb-3">Datos de Entrega y Confirmación</h5>
+                        <form id="formCheckout" onsubmit="confirmarPedido(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-medium">Nombre Completo *</label>
+                                    <input type="text" id="chkNombre" class="form-control" required placeholder="Juan Pérez">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-medium">Teléfono (Ej: 7788-9900) *</label>
+                                    <input type="text" id="chkTelefono" class="form-control" required placeholder="7000-0000">
+                                    <div class="invalid-feedback">Formato inválido. Ejemplo de formato: 7788-9900 o 8 dígitos.</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label small fw-medium">Correo Electrónico *</label>
+                                    <input type="email" id="chkEmail" class="form-control" required placeholder="juan@ejemplo.com">
+                                    <div class="invalid-feedback">Por favor ingrese un correo válido.</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label small fw-medium">Dirección Completa de Entrega *</label>
+                                    <textarea id="chkDireccion" class="form-control" rows="2" required placeholder="Calle, Avenida, Casa #, Colonia..."></textarea>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-end">
+                                <button type="button" class="btn btn-outline-secondary me-2" onclick="mostrarVistaCarrito()">Volver al Carrito</button>
+                                <button type="submit" class="btn btn-bakery">Confirmar y Pagar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light" id="modalFooterNav">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="btnIrACheckout" class="btn btn-bakery" onclick="irACheckout()">Proceder al Pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container para Toasts Flotantes -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill fs-5"></i>
+                    <span id="toastMessage">¡Producto añadido al carrito!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 Bundle con Popper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========================================== -->
+    <!-- 9. LÓGICA JAVASCRIPT (DOM, LOCALSTORAGE)   -->
+    <!-- ========================================== -->
+    <script>
+        // --- BASE DE DATOS DE PRODUCTOS (ARRAY DE OBJETOS JSON) ---
+        const productosBD = [
+            { id: 1, nombre: "Chocolate Lover's Delight", categoria: "pasteles", precio: 18.00, img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=500&auto=format&fit=crop", desc: "Pastel rico en chocolate con capas de ganache cremoso." },
+            { id: 2, nombre: "Fresh Berry Tart", categoria: "pasteleria", precio: 4.50, img: "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=500&auto=format&fit=crop", desc: "Tartaleta crujiente con frutas de temporada seleccionadas." },
+            { id: 3, nombre: "Classic Croissant", categoria: "pasteleria", precio: 3.00, img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500&auto=format&fit=crop", desc: "Croissant dorado, hojaldrado y elaborado con mantequilla." },
+            { id: 4, nombre: "Lemon Poppy Seed Muffin", categoria: "pasteleria", precio: 2.75, img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop", desc: "Muffin cítrico suave decorado con glaseado de limón." },
+            { id: 5, nombre: "Pan de Masa Madre (Sourdough)", categoria: "panes", precio: 6.00, img: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80", desc: "Corteza crujiente por fuera y miga suave con fermentación natural." },
+            { id: 6, nombre: "Baguette Tradicional", categoria: "panes", precio: 2.50, img: "https://images.unsplash.com/photo-1597079910443-60c43fc4f729?q=80&w=500&auto=format&fit=crop", desc: "Pan artesanal estilo francés perfecto para acompañar comidas." },
+            { id: 7, nombre: "Café Espresso de Especialidad", categoria: "bebidas", precio: 2.50, img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=500&auto=format&fit=crop", desc: "Café recién molido de grano entero importado de finca." },
+            { id: 8, nombre: "Té de Frutos Rojos e Infusión", categoria: "bebidas", precio: 2.00, img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=500&auto=format&fit=crop", desc: "Infusión caliente o helada con notas frutales aromáticas." }
+        ];
+
+        // --- ESTADO DEL CARRITO ---
+        let carrito = JSON.parse(localStorage.getItem("gourmet_carrito")) || [];
+
+        // --- INICIALIZACIÓN AL CARGAR LA PÁGINA ---
+        document.addEventListener("DOMContentLoaded", () => {
+            renderizarCatalogo(productosBD);
+            actualizarInterfazCarrito();
+        });
+
+        // --- FUNCIÓN PARA RENDERIZAR PRODUCTOS EN EL DOM ---
+        function renderizarCatalogo(lista) {
+            const contenedor = document.getElementById("contenedorProductos");
+            contenedor.innerHTML = "";
+
+            if (lista.length === 0) {
+                contenedor.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <i class="bi bi-search display-4 text-muted"></i>
+                        <p class="text-muted mt-2">No se encontraron productos en esta categoría.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            lista.forEach(prod => {
+                const cardHTML = `
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-card">
+                            <img src="${prod.img}" class="card-img-top" alt="${prod.nombre}" style="height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title font-serif fw-bold mb-0 fs-6">${prod.nombre}</h5>
+                                </div>
+                                <p class="card-text text-muted small flex-grow-1">${prod.desc}</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="badge-price">$${prod.precio.toFixed(2)}</span>
+                                    <button class="btn btn-bakery btn-sm" onclick="agregarAlCarrito(${prod.id})">
+                                        <i class="bi bi-cart-plus me-1"></i> Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                contenedor.innerHTML += cardHTML;
+            });
+        }
+
+        // --- FILTRADO POR CATEGORÍA ---
+        function filtrarProductos(categoria, boton) {
+            // Actualizar botones activos
+            document.querySelectorAll(".btn-filter").forEach(b => {
+                b.classList.remove("active", "btn-bakery");
+                b.classList.add("btn-outline-bakery");
+            });
+            boton.classList.add("active", "btn-bakery");
+            boton.classList.remove("btn-outline-bakery");
+
+            if (categoria === "todos") {
+                renderizarCatalogo(productosBD);
+            } else {
+                const filtrados = productosBD.filter(p => p.categoria === categoria);
+                renderizarCatalogo(filtrados);
+            }
+        }
+
+        // --- BÚSQUEDA EN TIEMPO REAL ---
+        function buscarProductos() {
+            const texto = document.getElementById("inputBuscar").value.toLowerCase();
+            const resultados = productosBD.filter(p => 
+                p.nombre.toLowerCase().includes(texto) || p.desc.toLowerCase().includes(texto)
+            );
+            renderizarCatalogo(resultados);
+        }
+
+        // --- GESTIÓN DEL CARRITO (AGREGAR, EDITAR, ELIMINAR) ---
+        function agregarAlCarrito(idProducto) {
+            const producto = productosBD.find(p => p.id === idProducto);
+            if (!producto) return;
+
+            const existe = carrito.find(item => item.id === idProducto);
+            if (existe) {
+                existe.cantidad++;
+            } else {
+                carrito.push({
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    img: producto.img,
+                    cantidad: 1
+                });
+            }
+
+            guardarYActualizar();
+            mostrarToast(`"${producto.nombre}" agregado al carrito`);
+        }
+
+        function cambiarCantidad(idProducto, cambio) {
+            const item = carrito.find(p => p.id === idProducto);
+            if (!item) return;
+
+            item.cantidad += cambio;
+            if (item.cantidad <= 0) {
+                eliminarDelCarrito(idProducto);
+            } else {
+                guardarYActualizar();
+            }
+        }
+
+        function eliminarDelCarrito(idProducto) {
+            carrito = carrito.filter(p => p.id !== idProducto);
+            guardarYActualizar();
+        }
+
+        function guardarYActualizar() {
+            localStorage.setItem("gourmet_carrito", JSON.stringify(carrito));
+            actualizarInterfazCarrito();
+        }
+
+        // --- ACTUALIZACIÓN DE LA INTERFAZ Y CÁLCULOS DEL CARRITO ---
+        function actualizarInterfazCarrito() {
+            // Actualizar contador del Navbar
+            const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+            document.getElementById("cartBadge").innerText = totalItems;
+
+            // Renderizar Tabla del Modal
+            const tablaBody = document.getElementById("tablaCarritoBody");
+            const msgVacio = document.getElementById("carritoVacioMsg");
+            const btnCheckout = document.getElementById("btnIrACheckout");
+
+            tablaBody.innerHTML = "";
+
+            if (carrito.length === 0) {
+                msgVacio.classList.remove("d-none");
+                if(btnCheckout) btnCheckout.disabled = true;
+            } else {
+                msgVacio.classList.add("d-none");
+                if(btnCheckout) btnCheckout.disabled = false;
+
+                carrito.forEach(item => {
+                    const subtotalItem = item.precio * item.cantidad;
+                    const fila = `
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="${item.img}" style="width: 45px; height: 45px; object-fit: cover; border-radius: 8px;">
+                                    <span class="fw-medium small">${item.nombre}</span>
+                                </div>
+                            </td>
+                            <td>$${item.precio.toFixed(2)}</td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-secondary" onclick="cambiarCantidad(${item.id}, -1)">-</button>
+                                    <span class="btn btn-light disabled px-3 fw-bold">${item.cantidad}</span>
+                                    <button class="btn btn-outline-secondary" onclick="cambiarCantidad(${item.id}, 1)">+</button>
+                                </div>
+                            </td>
+                            <td class="text-end fw-bold">$${subtotalItem.toFixed(2)}</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-danger border-0" onclick="eliminarDelCarrito(${item.id})">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                    tablaBody.innerHTML += fila;
+                });
+            }
+
+            // Cálculos con Reducción
+            const subtotal = carrito.reduce((acc, i) => acc + (i.precio * i.cantidad), 0);
+            const impuesto = subtotal * 0.13; // IVA del 13%
+            const total = subtotal + impuesto;
+
+            document.getElementById("resumenSubtotal").innerText = `$${subtotal.toFixed(2)}`;
+            document.getElementById("resumenImpuesto").innerText = `$${impuesto.toFixed(2)}`;
+            document.getElementById("resumenTotal").innerText = `$${total.toFixed(2)}`;
+        }
+
+        // --- NAVEGACIÓN DENTRO DEL MODAL (CARRITO / CHECKOUT) ---
+        function irACheckout() {
+            document.getElementById("vistaCarrito").classList.add("d-none");
+            document.getElementById("vistaCheckout").classList.remove("d-none");
+            document.getElementById("modalFooterNav").classList.add("d-none");
+        }
+
+        function mostrarVistaCarrito() {
+            document.getElementById("vistaCheckout").classList.add("d-none");
+            document.getElementById("vistaCarrito").classList.remove("d-none");
+            document.getElementById("modalFooterNav").classList.remove("d-none");
+        }
+
+        // --- VALIDACIÓN DE CHECKOUT CON EXPRESIONES REGULARES (REGEX) ---
+        function confirmarPedido(event) {
+            event.preventDefault();
+
+            const telefono = document.getElementById("chkTelefono").value.trim();
+            const email = document.getElementById("chkEmail").value.trim();
+            
+            // RegEx de Validación
+            const regexTelefono = /^[267][0-9]{3}-?[0-9]{4}$/; // Formato común de teléfono de 8 dígitos
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            let valido = true;
+
+            if (!regexTelefono.test(telefono)) {
+                document.getElementById("chkTelefono").classList.add("is-invalid");
+                valido = false;
+            } else {
+                document.getElementById("chkTelefono").classList.remove("is-invalid");
+            }
+
+            if (!regexEmail.test(email)) {
+                document.getElementById("chkEmail").classList.add("is-invalid");
+                valido = false;
+            } else {
+                document.getElementById("chkEmail").classList.remove("is-invalid");
+            }
+
+            if (valido) {
+                // Simulación exitosa de pedido
+                alert("¡Pedido realizado con éxito! Gracias por tu compra en Gourmet Delight Bakery.");
+                
+                // Limpiar carrito y reiniciar modal
+                carrito = [];
+                guardarYActualizar();
+                
+                const modalEl = document.getElementById('cartModal');
+                const modalInstance = bootstrap.Modal.getInstance(modalEl);
+                modalInstance.hide();
+                
+                mostrarVistaCarrito();
+                document.getElementById("formCheckout").reset();
+            }
+        }
+
+        // --- PROCESAMIENTO DE FORMULARIO DE CONTACTO ---
+        function procesarContacto(event) {
+            event.preventDefault();
+            document.getElementById("cardContactoForm").classList.add("d-none");
+            document.getElementById("cardContactoFeedback").classList.remove("d-none");
+        }
+
+        function resetFormContacto() {
+            document.getElementById("contactForm").reset();
+            document.getElementById("cardContactoFeedback").classList.add("d-none");
+            document.getElementById("cardContactoForm").classList.remove("d-none");
+        }
+
+        // --- UTILIDAD: MOSTRAR TOAST DE NOTIFICACIÓN ---
+        function mostrarToast(mensaje) {
+            document.getElementById("toastMessage").innerText = mensaje;
+            const liveToastEl = document.getElementById('liveToast');
+            const toast = new bootstrap.Toast(liveToastEl, { delay: 2500 });
+            toast.show();
+        }
+    </script>
+</body>
+</html>
