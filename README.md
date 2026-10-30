@@ -5,9 +5,7 @@ Bienvenido al repositorio oficial del proyecto **Gourmet Delight Bakery**, una p
 ---
 
 ## 🌐 Aplicación en Producción
-* **Sitio Web Publicado:** [https://tu-usuario.github.io/nombre-de-tu-repo/](https://tu-usuario.github.io/nombre-de-tu-repo/) *(Reemplaza esta URL con tu enlace de GitHub Pages o Netlify)*
-
----
+* **Sitio Web Publicado:** [https://proyectodecatedralme.netlify.app/](https://proyectodecatedralme.netlify.app/)]
 
 ## 👥 Integrantes del Equipo
 * **Ricardo Valdés** - VV263450-01T[cite: 1]
